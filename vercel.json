@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "JFPM_DjangoWebApp/manage.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "JFPM_DjangoWebApp/manage.py"
+    }
+  ]
+}
