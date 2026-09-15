@@ -31,6 +31,10 @@ ALLOWED_HOSTS = [
     "127.0.0.1"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://jfpm-django-web-app.vercel.app",
+]
+
 
 # Application definition
 
@@ -131,3 +135,6 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+LOGIN_REDIRECT_URL = '/registration/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
